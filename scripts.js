@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data =>{
         image.innerHTML='<img class="w-100" src="'+data.url+'">';
-        image.innerHTML+='<a href="'+data.hdurl+'" download><button type="button" class="btn btn-secondary mt-3">Descargar imagen HD</button></a>'
+        image.innerHTML+='<a href="'+data.hdurl+'" download target="_blank"><button type="button" class="btn btn-secondary mt-3">Descargar imagen HD</button></a>'
         date.innerHTML=data.date;
         title.innerHTML+='<h2>'+data.title+'</h2>';
         desc.innerHTML+='<p>'+data.explanation+'</p>';
